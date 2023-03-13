@@ -1,0 +1,615 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20224.22.1117.1841                               -->
+<workbook original-version='18.1' source-build='2022.4.0 (20224.22.1117.1841)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Car_member+(Car for Tableau)' inline='true' name='federated.1nls0uw0uxmx7l165audd1pv4z16' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Car for Tableau' name='excel-direct.0c99gag0n6aw1m1gqrc110ftc2m5'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/namu9/OneDrive/문서/내 Tableau 리포지토리/데이터 원본/Car for Tableau.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation join='left' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[Car_order].[mem_no]' />
+              <expression op='[Car_member].[mem_no]' />
+            </expression>
+          </clause>
+          <relation connection='excel-direct.0c99gag0n6aw1m1gqrc110ftc2m5' name='Car_order' table='[Car_order$]' type='table'>
+            <columns gridOrigin='A1:D4095:no:A1:D4095:0' header='yes' outcome='6'>
+              <column datatype='integer' name='order_no' ordinal='0' />
+              <column datatype='integer' name='mem_no' ordinal='1' />
+              <column datatype='date' name='order_date' ordinal='2' />
+              <column datatype='integer' name='store_cd' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.0c99gag0n6aw1m1gqrc110ftc2m5' name='Car_member' table='[Car_member$]' type='table'>
+            <columns gridOrigin='A1:E4095:no:A1:E4095:0' header='yes' outcome='6'>
+              <column datatype='integer' name='mem_no' ordinal='0' />
+              <column datatype='string' name='gender' ordinal='1' />
+              <column datatype='integer' name='age' ordinal='2' />
+              <column datatype='string' name='addr' ordinal='3' />
+              <column datatype='date' name='join_date' ordinal='4' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation join='left' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[Car_order].[mem_no]' />
+              <expression op='[Car_member].[mem_no]' />
+            </expression>
+          </clause>
+          <relation connection='excel-direct.0c99gag0n6aw1m1gqrc110ftc2m5' name='Car_order' table='[Car_order$]' type='table'>
+            <columns gridOrigin='A1:D4095:no:A1:D4095:0' header='yes' outcome='6'>
+              <column datatype='integer' name='order_no' ordinal='0' />
+              <column datatype='integer' name='mem_no' ordinal='1' />
+              <column datatype='date' name='order_date' ordinal='2' />
+              <column datatype='integer' name='store_cd' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.0c99gag0n6aw1m1gqrc110ftc2m5' name='Car_member' table='[Car_member$]' type='table'>
+            <columns gridOrigin='A1:E4095:no:A1:E4095:0' header='yes' outcome='6'>
+              <column datatype='integer' name='mem_no' ordinal='0' />
+              <column datatype='string' name='gender' ordinal='1' />
+              <column datatype='integer' name='age' ordinal='2' />
+              <column datatype='string' name='addr' ordinal='3' />
+              <column datatype='date' name='join_date' ordinal='4' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[addr]' value='[Car_member].[addr]' />
+          <map key='[age]' value='[Car_member].[age]' />
+          <map key='[gender]' value='[Car_member].[gender]' />
+          <map key='[join_date]' value='[Car_member].[join_date]' />
+          <map key='[mem_no (Car!member)]' value='[Car_member].[mem_no]' />
+          <map key='[mem_no]' value='[Car_order].[mem_no]' />
+          <map key='[order_date]' value='[Car_order].[order_date]' />
+          <map key='[order_no]' value='[Car_order].[order_no]' />
+          <map key='[store_cd]' value='[Car_order].[store_cd]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Car_order]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D4095:no:A1:D4095:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Car_member]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:E4095:no:A1:E4095:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_no</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[order_no]</local-name>
+            <parent-name>[Car_order]</parent-name>
+            <remote-alias>order_no</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Car!order_DBAD230CFDB6412083CD6768A743B906]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mem_no</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[mem_no]</local-name>
+            <parent-name>[Car_order]</parent-name>
+            <remote-alias>mem_no</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Car!order_DBAD230CFDB6412083CD6768A743B906]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[order_date]</local-name>
+            <parent-name>[Car_order]</parent-name>
+            <remote-alias>order_date</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Car!order_DBAD230CFDB6412083CD6768A743B906]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>store_cd</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[store_cd]</local-name>
+            <parent-name>[Car_order]</parent-name>
+            <remote-alias>store_cd</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Car!order_DBAD230CFDB6412083CD6768A743B906]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mem_no</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[mem_no (Car!member)]</local-name>
+            <parent-name>[Car_member]</parent-name>
+            <remote-alias>mem_no</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Car!order_DBAD230CFDB6412083CD6768A743B906]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[Car_member]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Car!order_DBAD230CFDB6412083CD6768A743B906]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[Car_member]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Car!order_DBAD230CFDB6412083CD6768A743B906]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>addr</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[addr]</local-name>
+            <parent-name>[Car_member]</parent-name>
+            <remote-alias>addr</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Car!order_DBAD230CFDB6412083CD6768A743B906]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>join_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[join_date]</local-name>
+            <parent-name>[Car_member]</parent-name>
+            <remote-alias>join_date</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Car!order_DBAD230CFDB6412083CD6768A743B906]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='고객분류' datatype='string' name='[Calculation_521854608432144384]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF[age] &gt;= 30 AND[age] &lt; 40 THEN &apos;30대(핵심고객)&apos;&#13;&#10;ELSEIF [age] &gt;= 20 AND[age] &lt; 30 THEN &apos;20대(타겟고객)&apos;&#13;&#10;ELSE &apos;그 외&apos;&#13;&#10;END' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='Car_order' datatype='table' name='[__tableau_internal_object_id__].[Car!order_DBAD230CFDB6412083CD6768A743B906]' role='measure' type='quantitative' />
+      <column caption='Addr' datatype='string' name='[addr]' role='dimension' type='nominal' />
+      <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Join Date' datatype='date' name='[join_date]' role='dimension' type='ordinal' />
+      <column caption='mem no (Car!member)' datatype='integer' name='[mem_no (Car!member)]' role='measure' type='quantitative' />
+      <column caption='Mem No' datatype='integer' name='[mem_no]' role='measure' type='quantitative' />
+      <column caption='Order Date' datatype='date' name='[order_date]' role='dimension' type='ordinal' />
+      <column caption='Order No' datatype='integer' name='[order_no]' role='measure' type='quantitative' />
+      <column caption='Store Cd' datatype='integer' name='[store_cd]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;대한민국&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Car_order' id='Car!order_DBAD230CFDB6412083CD6768A743B906'>
+            <properties context=''>
+              <relation join='left' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[Car_order].[mem_no]' />
+                    <expression op='[Car_member].[mem_no]' />
+                  </expression>
+                </clause>
+                <relation connection='excel-direct.0c99gag0n6aw1m1gqrc110ftc2m5' name='Car_order' table='[Car_order$]' type='table'>
+                  <columns gridOrigin='A1:D4095:no:A1:D4095:0' header='yes' outcome='6'>
+                    <column datatype='integer' name='order_no' ordinal='0' />
+                    <column datatype='integer' name='mem_no' ordinal='1' />
+                    <column datatype='date' name='order_date' ordinal='2' />
+                    <column datatype='integer' name='store_cd' ordinal='3' />
+                  </columns>
+                </relation>
+                <relation connection='excel-direct.0c99gag0n6aw1m1gqrc110ftc2m5' name='Car_member' table='[Car_member$]' type='table'>
+                  <columns gridOrigin='A1:E4095:no:A1:E4095:0' header='yes' outcome='6'>
+                    <column datatype='integer' name='mem_no' ordinal='0' />
+                    <column datatype='string' name='gender' ordinal='1' />
+                    <column datatype='integer' name='age' ordinal='2' />
+                    <column datatype='string' name='addr' ordinal='3' />
+                    <column datatype='date' name='join_date' ordinal='4' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='데이터 조회(SELECT)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Car_member+(Car for Tableau)' name='federated.1nls0uw0uxmx7l165audd1pv4z16' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1nls0uw0uxmx7l165audd1pv4z16'>
+            <column-instance column='[mem_no]' derivation='CountD' name='[ctd:mem_no:qk]' pivot='key' type='quantitative' />
+            <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column caption='Join Date' datatype='date' name='[join_date]' role='dimension' type='ordinal' />
+            <column caption='Mem No' datatype='integer' name='[mem_no]' role='measure' type='quantitative' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column caption='Order Date' datatype='date' name='[order_date]' role='dimension' type='ordinal' />
+            <column-instance column='[join_date]' derivation='Year' name='[yr:join_date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[order_date]' derivation='Year' name='[yr:order_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1nls0uw0uxmx7l165audd1pv4z16].[ctd:mem_no:qk]' included-values='in-range'>
+            <min>50</min>
+          </filter>
+          <filter class='categorical' column='[federated.1nls0uw0uxmx7l165audd1pv4z16].[yr:order_date:ok]'>
+            <groupfilter function='member' level='[yr:order_date:ok]' member='2021' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1nls0uw0uxmx7l165audd1pv4z16].[yr:order_date:ok]</column>
+            <column>[federated.1nls0uw0uxmx7l165audd1pv4z16].[ctd:mem_no:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1nls0uw0uxmx7l165audd1pv4z16].[ctd:mem_no:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1nls0uw0uxmx7l165audd1pv4z16].[yr:join_date:ok] / [federated.1nls0uw0uxmx7l165audd1pv4z16].[none:gender:nk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{CFF46C68-3188-4224-9BC8-A8C89DD09E60}' />
+    </worksheet>
+    <worksheet name='연산자 및 함수'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Car_member+(Car for Tableau)' name='federated.1nls0uw0uxmx7l165audd1pv4z16' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1nls0uw0uxmx7l165audd1pv4z16'>
+            <column caption='고객분류' datatype='string' name='[Calculation_521854608432144384]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF[age] &gt;= 30 AND[age] &lt; 40 THEN &apos;30대(핵심고객)&apos;&#13;&#10;ELSEIF [age] &gt;= 20 AND[age] &lt; 30 THEN &apos;20대(타겟고객)&apos;&#13;&#10;ELSE &apos;그 외&apos;&#13;&#10;END' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[mem_no]' derivation='CountD' name='[ctd:mem_no:qk]' pivot='key' type='quantitative' />
+            <column caption='Mem No' datatype='integer' name='[mem_no]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_521854608432144384]' derivation='None' name='[none:Calculation_521854608432144384:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1nls0uw0uxmx7l165audd1pv4z16].[ctd:mem_no:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1nls0uw0uxmx7l165audd1pv4z16].[none:Calculation_521854608432144384:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{DFF0B4E0-269D-4E64-861A-B21A1B735D4A}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='데이터 조회(SELECT)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1nls0uw0uxmx7l165audd1pv4z16].[none:gender:nk]</field>
+            <field>[federated.1nls0uw0uxmx7l165audd1pv4z16].[yr:join_date:ok]</field>
+            <field>[federated.1nls0uw0uxmx7l165audd1pv4z16].[yr:order_date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{10A8AF91-D205-4B0E-8013-C1AA31B2C43A}' />
+    </window>
+    <window class='worksheet' maximized='true' name='연산자 및 함수'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1nls0uw0uxmx7l165audd1pv4z16].[none:Calculation_521854608432144384:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{36F3F74A-8384-4319-A45A-D5CFE2479BCE}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='84' name='데이터 조회(SELECT)' width='192'>
+      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
+      TkSuQmCC
+    </thumbnail>
+    <thumbnail height='84' name='연산자 및 함수' width='164'>
+      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
+      AAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
